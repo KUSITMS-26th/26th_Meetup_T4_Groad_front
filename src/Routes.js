@@ -7,7 +7,7 @@ import Payment from './pages/Review/Review';
 import Main from './pages/Main/Main';
 import Footer from './component/footer/Footer';
 import Header from './component/nav/Nav';
-import ScrollToTop from './components/ScrollToTop';
+import ScrollToTop from './ScrollToTop';
 
 const Router = () => {
   return (
