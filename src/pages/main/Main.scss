@@ -1,0 +1,64 @@
+@import '/../../variables.scss';
+
+.mainWrap {
+  @include flex-center;
+  flex-direction: column;
+  padding-top: 97px;
+
+  .wrapWrap {
+    width: 100vw;
+    overflow: hidden;
+
+    .mainBannerImgWrap {
+      width: 300vw;
+
+      .btnWrap {
+        @include flex-center;
+        width: 100vw;
+        position: absolute;
+        top: 40%;
+        transform: translateY(-50%);
+        justify-content: space-between;
+        font-size: 80px;
+      }
+
+      .mainBanner {
+        width: 100vw;
+        float: left;
+
+        .bannerImg {
+          width: 100%;
+        }
+      }
+
+      button {
+        background-color: transparent;
+        padding: 30px;
+        color: #e1dedf;
+      }
+    }
+  }
+
+  .secondBanner {
+    @include flex-center;
+    width: 1168px;
+    height: 176px;
+    margin-top: 48px;
+
+    .promotionBanner {
+      @include flex-center;
+      width: 592px;
+      height: 176px;
+    }
+  }
+
+  .bestItems {
+    margin-top: 80px;
+  }
+
+  .fourthBanner {
+    width: 1168px;
+    height: 208px;
+    margin-top: 50px;
+  }
+}
