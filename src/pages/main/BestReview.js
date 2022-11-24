@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Products from '../List/Product/Product';
-import './BestItems.scss';
+import './BestReview.scss';
 
 const BestReview = () => {
   const [bestReviews, setBestReviews] = useState([]);
@@ -97,8 +96,6 @@ const BestReview = () => {
           })}
         </span>
       </div>
-
-      <ul className="products_list">{tabContArr[activeIndex].tabCont}</ul>
     </div>
   );
 };
