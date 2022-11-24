@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import BestItems from './BestItems';
+import BestReviews from './Bestreviews';
+import BestResume from './BestResume';
 import './Main.scss';
-import NotifyBanner from './NotifyBanner';
+
 
 const Main = () => {
   const [move, setMove] = useState(0);
@@ -64,7 +65,7 @@ const Main = () => {
           <img alt="promotion" src="images/promotion.png" />
         </div>
       </div>
-      <BestItems />
+      <BestReviews />
       <div className="fourthBanner">
         <img alt="foot_banner" src="images/footerbanner.png" />
       </div>
