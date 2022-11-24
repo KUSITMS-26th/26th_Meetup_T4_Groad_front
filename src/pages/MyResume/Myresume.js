@@ -62,7 +62,7 @@ function MyResume() {
     </Body>
   );
 }
-export default Resume;
+export default MyResume;
 
 const Body = styled.main`
   padding-top: 40px;
