@@ -93,6 +93,95 @@ class TestRunner {
   
 // 1.로그인 - 2. 이력서 게시판 - 3. 후기 게시판 - 4. 후기 작성 - 5. 메인 페이지 - 6. 후기 수정
   
+  @Test
+  public void test01() {
+    grinder.logger.info("test1")
+    String url1 = "http://15.165.249.162:9191/login";
+    
+    HTTPResponse response = request.GET(url1, params)
+    
+    if (response.statusCode == 301 || response.statusCode == 302) {
+      grinder.logger.warn("Warning. The response may not be correct. The response code was {}.", response.statusCode)
+    } else {
+      assertThat(response.statusCode, is(200))
+    } 
+  }
+  
+  @Test
+  public void test02() {
+    grinder.logger.info("test2")
+    String url = "http://15.165.249.162:9191/resume";
+    
+    HTTPResponse response = request.GET(url, params)
+    
+    if (response.statusCode == 301 || response.statusCode == 302) {
+      grinder.logger.warn("Warning. The response may not be correct. The response code was {}.", response.statusCode)
+    } else {
+      assertThat(response.statusCode, is(200)) 
+    }
+  }
+
+  
+  @Test
+  public void test03() {
+    grinder.logger.info("test3")
+    String url = "http://15.165.249.162:9191/resume";
+    
+    HTTPResponse response = request.GET(url, params)
+    
+    if (response.statusCode == 301 || response.statusCode == 302) {
+      grinder.logger.warn("Warning. The response may not be correct. The response code was {}.", response.statusCode)
+    } else {
+      assertThat(response.statusCode, is(200))
+    }
+  }
+  
+  @Test
+  public void test04() {
+    grinder.logger.info("test4")
+    String url = "http://15.165.249.162:9191/review/write";
+    String body = "{
+      "content": " 
+      "title": "개발", 
+      "category": "개발", 
+      "mapDelete": "NO"
+    }";
+  
+    grinder.logger.info(body);
+    HTTPResponse response = request.POST(url, body.getBytes())
+  
+    if (response.statusCode == 301 || response.statusCode == 302) {
+       grinder.logger.warn("Warning. The response may not be correct. The response code was {}.", response.statusCode)
+    } else {
+      assertThat(response.statusCode, is(200))
+    } 
+  }
+
+  @Test
+  public void test06() {
+    grinder.logger.info("test6")
+    String url = "http://15.165.249.162:9191/review/"
+    String reviewId = 1;
+    String body = "{
+      "title": "개발",
+      "content": "개발",
+      "category": "개발",
+      "mapDelete": "NO"
+    }";
+    grinder.logger.info(body)
+    HTTPResponse response = request.PUT(url, body.getBytes()) 
+
+    if (response.statusCode == 301 || response.statusCode == 302) {
+      grinder.logger.warn("Warning. The response may not be correct. The response code was {}.", response.statusCode)
+    } else {
+      assertThat(response.statusCode, is(200))
+    }
+  }
+
+  
+  
+
+  
 
 
   
